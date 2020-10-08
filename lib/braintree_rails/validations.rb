@@ -10,7 +10,7 @@ module BraintreeRails
       end
 
       def validator_class
-        name.concat("Validator").constantize
+        "#{name}Validator".constantize
       end
     end
 
