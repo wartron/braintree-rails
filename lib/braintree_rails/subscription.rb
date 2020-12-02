@@ -5,7 +5,8 @@ module BraintreeRails
     define_attributes(
       :create => [
         :billing_day_of_month, :first_billing_date, :id, :merchant_account_id, :never_expires, :number_of_billing_cycles,
-        :payment_method_token, :plan_id, :price, :trial_duration, :trial_duration_unit, :trial_period, :options, :descriptor
+        :payment_method_token, :plan_id, :price, :trial_duration, :trial_duration_unit, :trial_period, :options, :descriptor,
+        :add_ons, :discounts
       ],
       :update => [
         :merchant_account_id, :never_expires, :number_of_billing_cycles,
