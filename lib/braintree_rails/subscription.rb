@@ -18,8 +18,8 @@ module BraintreeRails
       ]
     )
 
-    has_many   :add_ons,      :class_name => "BraintreeRails::AddOns"
-    has_many   :discounts,    :class_name => "BraintreeRails::Discounts"
+    has_many   :bt_add_ons,      :class_name => "BraintreeRails::AddOns"
+    has_many   :bt_discounts,    :class_name => "BraintreeRails::Discounts"
     has_many   :transactions, :class_name => "BraintreeRails::Transactions"
     belongs_to :plan,         :class_name => "BraintreeRails::Plan",            :foreign_key => :plan_id
     belongs_to :credit_card,  :class_name => "BraintreeRails::CreditCard",      :foreign_key => :payment_method_token
