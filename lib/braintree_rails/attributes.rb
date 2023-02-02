@@ -1,4 +1,4 @@
-if ActiveModel.version.to_s.start_with? '5'
+if Gem::Version.new(ActiveModel.version) >= Gem::Version.new('5.0')
   require 'active_model/serializers/xml'
   require 'activemodel-serializers-xml'
 end

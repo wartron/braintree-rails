@@ -83,7 +83,7 @@ module Helper
       :first_name => "Brain",
       :last_name => "Tree",
       :email => "braintree-rails@exameple.com",
-      :date_of_birth => "2014-01-01",
+      :date_of_birth => "1983-01-01",
       :address => address_details_hash
     }
   end
