@@ -12,9 +12,11 @@ Gem::Specification.new do |spec|
   spec.test_files  = Dir['spec/**']
   spec.homepage    = 'https://github.com/lyang/braintree-rails'
   spec.required_ruby_version = '>= 1.9.2'
-  spec.add_runtime_dependency 'braintree', '>= 2.28.0', '< 3'
+  spec.add_runtime_dependency 'braintree', '>= 2.28.0', '< 5'
   spec.add_runtime_dependency 'activemodel', '>= 3.0', '< 7.2'
   spec.add_runtime_dependency 'activesupport', '>= 3.0', '< 7.2'
+  spec.add_runtime_dependency 'activemodel-serializers-xml', '>= 1.0.2'
+  spec.add_runtime_dependency 'active_model_serializers', '>= 0.10.13'
   spec.add_development_dependency 'rake', '~> 10'
   spec.add_development_dependency 'rspec', '~> 3'
   spec.add_development_dependency 'webmock', '~> 1'
