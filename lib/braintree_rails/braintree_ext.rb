@@ -67,17 +67,40 @@ end
 
 module Braintree
   class MerchantAccount
+    # Define the original methods for alias_method
+    def individual_details
+      @individual_details ||= IndividualDetails.new
+    end
+
+    def business_details
+      @business_details ||= BusinessDetails.new
+    end
+
+    def funding_details
+      @funding_details ||= FundingDetails.new
+    end
+
     alias_method :individual, :individual_details
     alias_method :business, :business_details
     alias_method :funding, :funding_details
 
     class IndividualDetails
       attr_reader :id
+
+      def address_details
+        @address_details ||= AddressDetails.new
+      end
+
       alias_method :address, :address_details
     end
 
     class BusinessDetails
       attr_reader :id
+
+      def address_details
+        @address_details ||= AddressDetails.new
+      end
+
       alias_method :address, :address_details
     end
 
